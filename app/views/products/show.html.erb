@@ -1,0 +1,14 @@
+<h1><%= @product.name %></h1>
+
+<p><%= @product.price %></p>
+
+<% if @product.description.present? %>
+  <p><%= @product.description %></p>
+<% end %>
+
+<p>
+  Status:
+  <%= @product.quantity > 0 ? "In stock" : "Out of stock" %>
+</p>
+
+<p><%= link_to "Back to products", products_path %></p>
